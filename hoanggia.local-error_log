@@ -1,0 +1,36 @@
+[Tue Jun 21 16:14:49.904441 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:49.904624 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP Stack trace:, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:49.906640 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:49.906682 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:49.906689 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:49.906696 2016] [:error] [pid 23244] [client 127.0.0.1:61313] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37, referer: http://hoanggiaglass.com/wp-admin/update-core.php?action=do-plugin-upgrade
+[Tue Jun 21 16:14:53.170458 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43
+[Tue Jun 21 16:14:53.170559 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP Stack trace:
+[Tue Jun 21 16:14:53.170658 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0
+[Tue Jun 21 16:14:53.170696 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10
+[Tue Jun 21 16:14:53.170702 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31
+[Tue Jun 21 16:14:53.170708 2016] [:error] [pid 23241] [client 127.0.0.1:61339] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37
+[Tue Jun 21 16:14:56.992160 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43
+[Tue Jun 21 16:14:56.992259 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP Stack trace:
+[Tue Jun 21 16:14:56.992378 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0
+[Tue Jun 21 16:14:56.992403 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10
+[Tue Jun 21 16:14:56.992410 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31
+[Tue Jun 21 16:14:56.992416 2016] [:error] [pid 23238] [client 127.0.0.1:61381] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37
+[Tue Jun 21 16:15:04.352325 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43
+[Tue Jun 21 16:15:04.365924 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP Stack trace:
+[Tue Jun 21 16:15:04.366162 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0
+[Tue Jun 21 16:15:04.366176 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10
+[Tue Jun 21 16:15:04.366184 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31
+[Tue Jun 21 16:15:04.366190 2016] [:error] [pid 23231] [client 127.0.0.1:61511] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37
+[Tue Jun 21 16:15:05.274224 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43
+[Tue Jun 21 16:15:05.274338 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP Stack trace:
+[Tue Jun 21 16:15:05.274365 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0
+[Tue Jun 21 16:15:05.274378 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10
+[Tue Jun 21 16:15:05.274384 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31
+[Tue Jun 21 16:15:05.274389 2016] [:error] [pid 23242] [client 127.0.0.1:61525] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37
+[Tue Jun 21 16:15:05.531517 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP Fatal error:  Call to undefined function is_admin() in /Volumes/WORK-SOFT/ROOT/hoanggia/wp-config.php on line 43
+[Tue Jun 21 16:15:05.531686 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP Stack trace:
+[Tue Jun 21 16:15:05.531716 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP   1. {main}() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:0
+[Tue Jun 21 16:15:05.531730 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP   2. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/plugins.php:10
+[Tue Jun 21 16:15:05.531736 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP   3. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-admin/admin.php:31
+[Tue Jun 21 16:15:05.531742 2016] [:error] [pid 23243] [client 127.0.0.1:61527] PHP   4. require_once() /Volumes/WORK-SOFT/ROOT/hoanggia/wp-load.php:37
