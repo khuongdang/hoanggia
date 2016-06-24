@@ -88,3 +88,9 @@ function wpdocs_dequeue_script() {
     wp_dequeue_script( 'jquery' );
 }
 add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
+
+function getMenuItems($menu_id = 2) {
+    global $menu;
+    $menu = wp_get_nav_menu_items($menu_id, array());
+}
+add_action( 'after_theme_setup', 'getMenuItems' );
