@@ -1,6 +1,12 @@
 NextGEN Gallery
 by Imagely
 
+= V2.1.46 - 06.23.2016 =
+* Fixed:   Remove inner nextgen-gallery folder due to build issue
+
+= V2.1.45 - 06.22.2016 =
+* Fixed:   Freemius assets should not be minified
+
 = V2.1.44 - 06.22.2016 =
 * NEW:     "Add Gallery" button added next to "Add Media" button on Create/Edit Post screen
 * NEW:     IGW placeholder images are watermarked

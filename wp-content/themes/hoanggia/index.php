@@ -3,12 +3,12 @@
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
         <!-- First slide -->
         <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-            <img src="assets/img/sliders/layer/bg1.jpg" class="ls-bg" alt="Slide background"/>
+            <img src="<?php echo get_site_url(); ?>/assets/img/sliders/layer/bg1.jpg" class="ls-bg" alt="Slide background"/>
 
-            <img class="ls-l" src="assets/img/mockup/iphone1.png" style="top: 85%; left: 44%;"
+            <img class="ls-l" src="<?php echo get_site_url(); ?>/assets/img/mockup/iphone1.png" style="top: 85%; left: 44%;"
                  data-ls="offsetxin:left; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;" />
 
-            <img src="assets/img/mockup/iphone.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
+            <img src="<?php echo get_site_url(); ?>/assets/img/mockup/iphone.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
                  data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
             <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
@@ -22,7 +22,7 @@
 
         <!--Second Slide-->
         <div class="ls-slide" data-ls="transition2d:93;">
-            <img src="assets/img/bg/18.jpg" class="ls-bg" alt="Slide background">
+            <img src="<?php echo get_site_url(); ?>/assets/img/bg/18.jpg" class="ls-bg" alt="Slide background">
 
             <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:70px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 1500; durationout : 500; "></i>
 
@@ -58,12 +58,12 @@
                 Twitter Bootstrap 3
             </a>
 
-            <img src="assets/img/mockup/iphone1.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 650px; slidedirection : right; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
+            <img src="<?php echo get_site_url(); ?>/assets/img/mockup/iphone1.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 650px; slidedirection : right; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
         </div>
 
         <!--Third Slide-->
         <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-            <img src="assets/img/sliders/layer/bg2.jpg" class="ls-bg" alt="Slide background">
+            <img src="<?php echo get_site_url(); ?>/assets/img/sliders/layer/bg2.jpg" class="ls-bg" alt="Slide background">
 
             <span class="ls-s-1" style=" color: #777; line-height:45px; font-weight: 200; font-size: 35px; top:100px; left: 50px; slidedirection : top; slideoutdirection : bottom; durationin : 1000; durationout : 1000; ">
                 Unify is Fully Responsive <br> Twitter Bootstrap 3 Template
@@ -73,7 +73,7 @@
                 Find Out More
             </a>
 
-            <img src="assets/img/mockup/iphone.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 670px; slidedirection : right; slideoutdirection : bottom; durationin : 3000; durationout : 3000; ">
+            <img src="<?php echo get_site_url(); ?>/assets/img/mockup/iphone.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 670px; slidedirection : right; slideoutdirection : bottom; durationin : 3000; durationout : 3000; ">
         </div>
         <!--End Third Slide-->
     </div><!--/layer_slider-->
@@ -120,7 +120,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img2.jpg" alt="" />
+                            <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img2.jpg" alt="" />
                         </div>
                         <a class="btn-more hover-effect" href="#">read more +</a>
                     </div>
@@ -134,7 +134,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img3.jpg" alt="" />
+                            <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img3.jpg" alt="" />
                         </div>
                         <a class="btn-more hover-effect" href="#">read more +</a>
                     </div>
@@ -148,7 +148,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img9.jpg" alt="" />
+                            <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img9.jpg" alt="" />
                         </div>
                         <a class="btn-more hover-effect" href="#">read more +</a>
                     </div>
@@ -162,7 +162,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img10.jpg" alt="" />
+                            <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img10.jpg" alt="" />
                         </div>
                         <a class="btn-more hover-effect" href="#">read more +</a>
                     </div>
@@ -179,31 +179,31 @@
         <div class="headline"><h2>Đối tác</h2></div>
         <div class="owl-clients-v1">
             <div class="item">
-                <img src="assets/img/clients4/1.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/1.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/2.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/2.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/3.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/3.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/4.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/4.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/5.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/5.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/6.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/6.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/7.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/7.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/8.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/8.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/9.png" alt="">
+                <img src="<?php echo get_site_url(); ?>/assets/img/clients4/9.png" alt="">
             </div>
         </div>
         <!-- End Owl Clients v1 -->

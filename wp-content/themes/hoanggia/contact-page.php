@@ -4,5 +4,5 @@ Template Name: Contact
 */
 get_header();
 ?>
-<h1>Content</h1>
+<?php include_once 'breadcrums.php' ?>
 <?php get_footer(); ?>

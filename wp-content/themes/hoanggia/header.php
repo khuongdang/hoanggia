@@ -19,22 +19,22 @@
     <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/css/style.css">
 
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-default.css">
-    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/animate.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/layer-slider/layerslider/css/layerslider.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/theme-colors/aqua.css" />
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/css/theme-colors/aqua.css" />
 </head>
 <body class="boxed-layout container">
 
@@ -44,7 +44,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="<?php echo get_site_url(); ?>">
-                <img src="assets/img/logo1-default.png" alt="Logo">
+                <img src="<?php echo get_site_url(); ?>/assets/img/logo1-default.png" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -83,25 +83,37 @@
                 <ul class="nav navbar-nav">
                     <!-- Menu -->
                     <?php
-                    print_r($menu);die;
+                    $menus = getMenuItems();
                     ?>
-                    <li class="">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Trang chủ
-                        </a>
-                    </li>
-                    <!-- End Menu -->
+                    <?php foreach ($menus as $items) {
+                        $title = $items->title;
+                        $link  = $items->url;
+                    ?>
+                        <?php if ($items->ID == 54) { ?>
+                            <li class="dropdown active">
+                                <a href="<?php echo $link;?>">
+                                    <?php echo $title;?>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="">
+                                        <a href="javascript:void(0);">Blog Large Image</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="javascript:void(0);">Blog Medium Image</a>
 
-                    <!-- Intro -->
-                    <li class="">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Giới thiệu
-                        </a>
-                    </li>
-                    <!-- End Intro -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <?php } else {?>
+                        <li class="">
+                            <a href="<?php echo $link;?>">
+                                <?php echo $title;?>
+                            </a>
+                        </li>
+                            <?php } ?>
+                    <?php }?>
 
-                    <!-- Products -->
-                    <li class="dropdown active">
+                    <!--<li class="dropdown active">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Sản phẩm
                         </a>
@@ -143,24 +155,7 @@
                             <li><a href="blog_masonry_3col.html">Masonry Grid Blog</a></li>
                             <li><a href="blog_timeline.html">Blog Timeline</a></li>
                         </ul>
-                    </li>
-                    <!-- End Products -->
-
-                    <!-- Printing -->
-                    <li class="">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            In ấn
-                        </a>
-                    </li>
-                    <!-- End Printing -->
-
-                    <!-- Contact -->
-                    <li class="">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Liên hệ
-                        </a>
-                    </li>
-                    <!-- End Contact -->
+                    </li>-->
 
                     <!-- Search Block -->
                     <li>

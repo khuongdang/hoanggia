@@ -25,8 +25,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>
-                        2015 &copy; All Rights Reserved.
-                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        <?php echo date('Y');?>
+                         &copy; All Rights Reserved.
+                        <a href="#">Hoang Gia Glass Printing Company</a>
                     </p>
                 </div>
 
@@ -79,22 +80,22 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
-<script type="text/javascript" src="assets/js/plugins/layer-slider.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/app.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/plugins/layer-slider.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
@@ -103,16 +104,16 @@
     });
 </script>
 <!--[if lt IE 9]>
-<script src="assets/plugins/respond.js"></script>
-<script src="assets/plugins/html5shiv.js"></script>
-<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<script src="<?php echo get_site_url(); ?>/assets/plugins/respond.js"></script>
+<script src="<?php echo get_site_url(); ?>/assets/plugins/html5shiv.js"></script>
+<script src="<?php echo get_site_url(); ?>/assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 <!-- For Background Image -->
-<script type="text/javascript" src="assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/backstretch/jquery.backstretch.min.js"></script>
 <script type="text/javascript">
     $.backstretch([
-        "assets/img/bg/13.jpg"
+        "<?php echo get_site_url(); ?>/assets/img/bg/13.jpg"
     ])
 </script>
 <!-- End For Background Image -->

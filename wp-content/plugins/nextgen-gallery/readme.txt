@@ -2,7 +2,7 @@
 Contributors: photocrati, imagely
 Tags: nextgen, nextgen gallery, gallery, galleries, image, images, image gallery, photo, photos, photo gallery, picture, pictures, picture gallery, album, albums, photo albums, image album, media, media gallery, thumbnails, thumbnail gallery, thumbnail galleries, slideshow, slideshows, slideshow gallery, slideshow galleries, fancybox, lightbox, responsive, responsive gallery, responsive galleries, wordpress responsive gallery, nextcellent, wordpress gallery plugin, wordpress photo gallery plugin, wp gallery, wp gallery plugins, best gallery plugin, free photo gallery, singlepic, image captions imagebrowser, watermarks, watermarking, photography, photographer
 Requires at least: 4.0.0
-Stable tag: 2.1.44
+Stable tag: 2.1.46
 Tested up to: 4.5.3
 License: GPLv2
 
@@ -186,6 +186,12 @@ For more information, feel free to visit the official website for the NextGEN Ga
 
 
 == Changelog ==
+
+= V2.1.46 - 06.23.2016 =
+* Fixed:   Remove inner nextgen-gallery folder due to build issue
+
+= V2.1.45 - 06.22.2016 =
+* Fixed:   Freemius assets should not be minified
 
 = V2.1.44 - 06.22.2016 =
 * NEW:     "Add Gallery" button added next to "Add Media" button on Create/Edit Post screen
