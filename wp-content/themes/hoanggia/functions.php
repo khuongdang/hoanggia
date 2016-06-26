@@ -93,3 +93,45 @@ function getMenuItems($menu_id = 2) {
     $menu = wp_get_nav_menu_items($menu_id, array());
     return $menu;
 }
+
+
+function get_pictures($catid = ''){
+    global $wpdb;
+    if(empty($catid)){
+        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid order by RAND()";
+    } else {
+        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid where g.gid = $catid";
+    }
+
+    $items = $wpdb->get_results($sql);
+
+    return $items;
+}
+
+function get_pictures_cat($catid = ''){
+    global $wpdb;
+    if(empty($catid)){
+        $sql = "SELECT * FROM `hg_ngg_gallery` AS g order by g.gid";
+    } else {
+        $sql = "SELECT * FROM `hg_ngg_gallery` AS g where g.id = $catid order by g.gid ";
+    }
+
+    $items = $wpdb->get_results($sql);
+
+    return $items;
+}
+
+function get_categories_from_album() {
+    global $nggdb;
+    $galleries = array();
+
+    $album = $nggdb->find_album(1);
+
+    foreach( $album->gallery_ids as $galleryid ){
+        $gallery = $nggdb->find_gallery($galleryid);
+        $galleries[$galleryid]['title'] = $gallery->title;
+        $galleries[$galleryid]['url'] = get_bloginfo('url') . '/portfolio/?album=all&gallery=' . $galleryid;
+    }
+
+    return $galleries;
+}

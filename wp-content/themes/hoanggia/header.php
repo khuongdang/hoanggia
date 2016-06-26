@@ -89,20 +89,25 @@
                         $title = $items->title;
                         $link  = $items->url;
                     ?>
-                        <?php if ($items->ID == 54) { ?>
+                        <?php if ($items->ID == 54) {
+                            $categories = get_categories_from_album();
+                            ?>
                             <li class="dropdown active">
                                 <a href="<?php echo $link;?>">
                                     <?php echo $title;?>
                                 </a>
+                                <?php if($categories) { ?>
                                 <ul class="dropdown-menu">
+                                    <?php
+                                    foreach ($categories as $items) {
+                                        $category_title = $items['title'];
+                                        ?>
                                     <li class="">
-                                        <a href="javascript:void(0);">Blog Large Image</a>
+                                        <a href="javascript:void(0);"><?php echo $category_title; ?></a>
                                     </li>
-                                    <li class="">
-                                        <a href="javascript:void(0);">Blog Medium Image</a>
-
-                                    </li>
+                                        <?php }?>
                                 </ul>
+                            <?php }?>
                             </li>
                             <?php } else {?>
                         <li class="">
