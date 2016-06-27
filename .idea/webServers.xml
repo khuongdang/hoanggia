@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6e1edaa2-106c-4f6f-a069-0f483f122b51" name="hoangggia" url="http://125.212.216.31">
+        <fileTransfer host="125.212.216.31" port="22" rootFolder="/home/ezyforu/ezyforu.com/" accessType="SFTP" password="dfdcdfc4dfc0dfdadf92dfccdfcfdf93df9adfd0dfcbdfe3dfc0dfccdfdedff5" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

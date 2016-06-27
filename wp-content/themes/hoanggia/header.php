@@ -93,7 +93,7 @@
                             $categories = get_categories_from_album();
                             ?>
                             <li class="dropdown active">
-                                <a href="<?php echo $link;?>">
+                                <a href="<?php echo $link;?>" class="dropdown-toggle" data-toggle="dropdown">
                                     <?php echo $title;?>
                                 </a>
                                 <?php if($categories) { ?>
@@ -103,7 +103,7 @@
                                         $category_title = $items['title'];
                                         ?>
                                     <li class="">
-                                        <a href="javascript:void(0);"><?php echo $category_title; ?></a>
+                                        <a href="<?php echo $link;?>"><?php echo $category_title; ?></a>
                                     </li>
                                         <?php }?>
                                 </ul>
