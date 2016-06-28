@@ -6,7 +6,6 @@
  * Time: 1:58 CH
  */
 $page_object = get_queried_object();
-
 $page_id     = get_queried_object_id();
 $page_title =  $page_object->post_title;
 $page_url = get_page_link($page_id);

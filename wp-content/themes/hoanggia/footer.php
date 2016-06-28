@@ -1,4 +1,10 @@
-
+<?php
+$my_postid = 61;//This is page id or post id
+$content_post = get_post($my_postid);
+$content = $content_post->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]&gt;', $content);
+?>
 <!--=== Footer Version 1 ===-->
 <div class="footer-v1">
     <div class="footer">
@@ -7,13 +13,7 @@
                 <!-- Address -->
                 <div class="col-md-12 map-img md-margin-bottom-20">
                     <div class="headline"><h2>Liên hệ</h2></div>
-                    <address class="md-margin-bottom-20">
-                        25, Lorem Lis Street, Orange <br />
-                        California, US <br />
-                        Phone: 800 123 3456 <br />
-                        Fax: 800 123 3456 <br />
-                        Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
-                    </address>
+                    <?php echo $content;?>
                 </div><!--/col-md-3-->
                 <!-- End Address -->
             </div>

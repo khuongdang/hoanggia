@@ -209,7 +209,9 @@ class nggManageGallery {
 		$height			= $picture->meta_data['height'];
 		$pixels			= "{$width} x {$height} pixels";
 		$excluded		= checked($picture->exclude, 1, false);
+		$featured		= checked($picture->feature, 1, false);
 		$exclude_label	= __("Exclude ?", 'nggallery');
+		$feature_label	= __("Feature ?", 'nggallery');
 
 		$output = array();
 
@@ -218,6 +220,7 @@ class nggManageGallery {
 		$output[] =  "<div class='meta'>{$pixels}</div>";
 		$output[] =  "<label for='exclude_{$picture->pid}'>";
 		$output[] =  "<input type='checkbox' id='exclude_{$picture->pid}' value='1' name='images[{$picture->pid}][exclude]' {$excluded}/> {$exclude_label}";
+		$output[] =  "<input type='checkbox' id='feature_{$picture->pid}' value='1' name='images[{$picture->pid}][feature]' {$featured}/> {$feature_label}";
 		$output[] =  "</label>";
 
 		return ($output = implode("\n", $output));
@@ -935,6 +938,7 @@ class nggManageGallery {
 
 			foreach ($_POST['images'] as $pid => $data) {
                 if (!isset($data['exclude'])) $data['exclude'] = 0;
+				if (!isset($data['feature'])) $data['feature'] = 0;
 				if (($image = $image_mapper->find($pid))) {
 					// Strip slashes from title/description/alttext fields
 					if (isset($data['description'])) {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<title>Boxed Image | Unify - Responsive Website Template</title>
+<title>Hoàng Gia Glass - Printing</title>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
@@ -103,7 +103,7 @@
                                         $category_title = $items['title'];
                                         ?>
                                     <li class="">
-                                        <a href="<?php echo $link;?>"><?php echo $category_title; ?></a>
+                                        <a href="<?php echo $link;?>?cat_id=<?php echo $items['id'];?>"><?php echo $category_title; ?></a>
                                     </li>
                                         <?php }?>
                                 </ul>

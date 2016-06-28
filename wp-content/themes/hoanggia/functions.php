@@ -115,9 +115,18 @@ function get_pictures_cat($catid = ''){
     } else {
         $sql = "SELECT * FROM `hg_ngg_gallery` AS g where g.id = $catid order by g.gid ";
     }
-
     $items = $wpdb->get_results($sql);
+    return $items;
+}
 
+function get_pictures_in_galleries($gallery){
+    global $wpdb;
+    $items = array();
+    if($gallery) {
+        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` IN ($gallery) 
+            GROUP BY p.`filename` order by RAND() ";
+        $items = $wpdb->get_results($sql);
+    }
     return $items;
 }
 
@@ -131,7 +140,16 @@ function get_categories_from_album() {
         $gallery = $nggdb->find_gallery($galleryid);
         $galleries[$galleryid]['title'] = $gallery->title;
         $galleries[$galleryid]['url'] = get_bloginfo('url') . '/portfolio/?album=all&gallery=' . $galleryid;
+        $galleries[$galleryid]['id'] = $gallery->gid;
     }
-
     return $galleries;
+}
+
+function get_images_from_album($album_id) {
+    global $nggdb;
+    $myalbum = nggdb::find_album( $album_id );
+    $mygals = $myalbum->gallery_ids;
+    $galleryIds = implode(',', $mygals);
+    $images = get_pictures_in_galleries($galleryIds);
+    return $images;
 }
