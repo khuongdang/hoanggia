@@ -14,76 +14,36 @@ if (empty($cat_id)) {
 } else {
     $products = get_pictures($cat_id);
 }
+
 ?>
 <link rel="stylesheet" href="<?php echo get_site_url();?>/assets/css/pages/portfolio-v1.css">
 <?php include_once 'breadcrums.php' ?>
 <div class="container content-sm">
-    
-    <div class="row">
-        <div class="col-md-4">
-            <div class="view view-tenth">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img6.jpg" alt="" />
-                <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="view view-tenth">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img5.jpg" alt="" />
-                <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="view view-tenth">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img4.jpg" alt="" />
-                <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div><!--/row-->
+    <?php foreach ($products as $index=>$items) {
+        $title = $items->alttext;
+        $image = '/'.str_replace('\\', '/', $items->path).'/'.$items->filename;
+        $desc = $items->description;
+        $link = get_page_link(130).'?id='.$items->pid;
+        if($index%3 != 0){
+        ?>
 
-    <div class="row">
+        <?php }?>
         <div class="col-md-4">
-            <div class="view view-tenth no-margin-bottom">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img3.jpg" alt="" />
+            <div class="view view-tenth">
+                <img class="img-responsive" src="<?php echo get_site_url().'/'.$image; ?>" alt="<?php echo $title; ?>" />
                 <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
+                    <h2><?php echo $title;?></h2>
+                    <p><?php echo $desc;?></p>
+                    <a href="<?php echo $link;?>" class="info">Chi tiết</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="view view-tenth no-margin-bottom">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img2.jpg" alt="" />
-                <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="view view-tenth no-margin-bottom">
-                <img class="img-responsive" src="<?php echo get_site_url(); ?>/assets/img/main/img1.jpg" alt="" />
-                <div class="mask">
-                    <h2>Portfolio Item</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                    <a href="portfolio_old_item.html" class="info">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div><!--/row-->
+        <?php if($index%3 != 0){
+        ?>
+
+    <?php } ?>
+    <?php }?>
+
 </div><!--/container-->
 <!--=== End Content Part ===-->
 <?php get_footer(); ?>

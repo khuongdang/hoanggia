@@ -94,13 +94,16 @@ function getMenuItems($menu_id = 2) {
     return $menu;
 }
 
-
-function get_pictures($catid = ''){
+function get_pictures($catid = '', $id = ''){
     global $wpdb;
     if(empty($catid)){
         $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid order by RAND()";
     } else {
-        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid where g.gid = $catid";
+        if (empty($id)) {
+            $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid where g.gid = $catid";
+        } else {
+            $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid where g.gid = $catid and p.pid != $id";
+        }
     }
 
     $items = $wpdb->get_results($sql);
@@ -152,4 +155,32 @@ function get_images_from_album($album_id) {
     $galleryIds = implode(',', $mygals);
     $images = get_pictures_in_galleries($galleryIds);
     return $images;
+}
+
+function get_category_info ($cat_id) {
+    global $wpdb;
+    $items = array();
+    if($cat_id) {
+        $sql = "SELECT * FROM `hg_ngg_gallery` WHERE gid = $cat_id";
+        $items = $wpdb->get_results($sql);
+    }
+    return $items;
+}
+
+function get_image_detail ($id) {
+    if ($id) {
+        global $wpdb;
+        $items = array();
+        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` = g.gid WHERE p.pid = $id";
+        $items = $wpdb->get_results($sql);
+        return $items;
+    }
+}
+
+add_filter( 'query_vars', 'wpa5413_query_vars' );
+function wpa5413_query_vars( $query_vars )
+{
+    $query_vars[] = 'cat_id';
+    $query_vars[] = 'id';
+    return $query_vars;
 }

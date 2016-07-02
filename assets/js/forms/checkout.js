@@ -96,7 +96,7 @@ var CheckoutForm = function () {
 	                email:
 	                {
 	                    required: 'Please enter your email address',
-	                    email: 'Please enter a VALID email address'
+	                    email: 'Vui lòng nhập đúng chuẩn email'
 	                },
 	                phone:
 	                {

@@ -35,16 +35,16 @@ var ContactForm = function () {
 	            {
 	                name:
 	                {
-	                    required: 'Please enter your name',
+	                    required: 'Vui lòng nhập họ tên của bạn',
 	                },
 	                email:
 	                {
-	                    required: 'Please enter your email address',
+	                    required: 'Vui lòng nhập email',
 	                    email: 'Please enter a VALID email address'
 	                },
 	                message:
 	                {
-	                    required: 'Please enter your message'
+	                    required: 'Vui lòng nhập nội dung'
 	                },
 	                captcha:
 	                {

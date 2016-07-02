@@ -55,6 +55,8 @@ $feature_products = get_images_from_album(1);
             <?php foreach ($feature_products as $product) {
                 $title = $product->alttext;
                 $image = '/'.str_replace('\\', '/', $product->path).'/'.$product->filename;
+                $desc = $product->description;
+                $link = get_page_link(130).'?id='.$product->pid;
             ?>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
@@ -62,10 +64,10 @@ $feature_products = get_images_from_album(1);
                         <div class="overflow-hidden">
                             <img title="<?php echo $title;?>" class="img-responsive" src="<?php echo $image;?>" alt="" />
                         </div>
-                        <a class="btn-more hover-effect" href="#">Chi tiết +</a>
+                        <a class="btn-more hover-effect" href="<?php echo $link;?>">Chi tiết +</a>
                     </div>
                     <div class="caption">
-                        <h3><a class="hover-effect" href="#"><?php echo $title;?></a></h3>
+                        <h3><a class="hover-effect" href="<?php echo $link;?>"><?php echo $title;?></a></h3>
                         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
                     </div>
                 </div>

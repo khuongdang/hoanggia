@@ -11,3 +11,16 @@ img.alignright {
     width:100%;
     height: auto;
 }
+
+.breadcrumbs h4 {
+    color: #666;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.breadcrumbs h4 span{
+    padding: 0 2px 0 2px;
+}
+.invalid {
+    color:red;
+}
