@@ -17,6 +17,7 @@ if (empty($cat_id)) {
 
 ?>
 <link rel="stylesheet" href="<?php echo get_site_url();?>/assets/css/pages/portfolio-v1.css">
+<!-- CSS Customization -->
 <?php include_once 'breadcrums.php' ?>
 <div class="container content-sm">
     <?php foreach ($products as $index=>$items) {

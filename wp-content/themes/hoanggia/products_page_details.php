@@ -49,9 +49,9 @@ $desc = $product->description;
             <p><?php echo $desc;?></p>
             <ul class="list-unstyled">
                 <li><h3>Liên hệ</h3></li>
-                <li><i class="fa fa-user color-green"></i> Nhân Hoàng Gia</li>
-                <li><i class="fa fa-phone color-green"></i> 0913 925 223</li>
-                <li><i class="fa fa-mail-forward color-green"></i> hoanggiaglass@yahoo.com.vn</li>
+                <li><i class="fa fa-user color-green"></i>Công Ty TNHH Nhân Hoàng Gia</li>
+                <li class="color-red size-16"><i class="fa fa-phone color-green"></i> 0913 925 223</li>
+                <li><i class="fa fa-mail-forward color-green"></i><a href="mailto:hoanggiaglass@yahoo.com.vn"> hoanggiaglass@yahoo.com.vn</a></li>
             </ul>
             <!--<a href="#" class="btn-u btn-u-large">VISIT THE PROJECT</a>-->
         </div>
@@ -59,7 +59,8 @@ $desc = $product->description;
     </div><!--/row-->
 
     <div class="tag-box tag-box-v2">
-        <p>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.</p>
+        <p>Với nhiều năm kinh nghiệm trong ngành in ấn quảng cáo, trong những năm qua, <span class="color-green">CÔNG TY TNHH NHÂN HOÀNG GIA</span> luôn là người bạn đồng hành đáng tin cậy của các công ty trong việc tạo dựng hình ảnh chuyên nghiệp các doanh nghiệp thông qua những sản phẩm in ấn quảng cáo.
+            Chúng tôi luôn mang lại cho khách hàng những sản phẩm in ấn chất lượng nhất với chi phí thấp nhất</p>
     </div>
 
     <div class="margin-bottom-20 clearfix"></div>

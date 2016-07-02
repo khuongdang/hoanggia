@@ -32,10 +32,7 @@ switch ($page_id) {
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
-        <h1 class="pull-left"><?php echo $page_title;?></h1>
-        <?php if($cat_id) {?>
-            <h4 class="pull-left"><span>/</span><?php echo $category[0]->title;?></h4>
-        <?php }?>
+        <h1 class="pull-left"><?php echo $page_title;?><?php if($cat_id) {?><span> / </span><?php echo $category[0]->title;?><?php }?></h1>
         <ul class="pull-right breadcrumb">
             <li><a href="<?php echo get_site_url();?>">Trang chủ</a></li>
             <!--<li><a href="<?php /*echo $page_url;*/?>"><?php /*echo $page_title;*/?></a></li>-->

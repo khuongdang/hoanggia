@@ -68,7 +68,7 @@ $feature_products = get_images_from_album(1);
                     </div>
                     <div class="caption">
                         <h3><a class="hover-effect" href="<?php echo $link;?>"><?php echo $title;?></a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                        <p><?php echo $desc;?></p>
                     </div>
                 </div>
             </div>

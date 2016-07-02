@@ -17,6 +17,13 @@ a:active {
 .color-green {
 	color: #27d7e7;
 }
+.color-red {
+	color: orangered;
+}
+.size-16{
+	font-size:16px;
+}
+
 a.read-more:hover { 
 	color:#27d7e7; 
 }
@@ -776,7 +783,8 @@ ul.blog-tags a:hover {
 .fa-icons li:hover i {
   background: #27d7e7; 
 }
-
+.fa {
+	margin-right:10px;}
 /* GLYPHICONS Icons Page Style */
 .bs-glyphicons li:hover {
   color: #27d7e7;
