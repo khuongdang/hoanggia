@@ -109,14 +109,5 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <script src="<?php echo get_site_url(); ?>/assets/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
-<!-- For Background Image -->
-<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/plugins/backstretch/jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-    $.backstretch([
-        "<?php echo get_site_url(); ?>/assets/img/bg/13.jpg"
-    ])
-</script>
-<!-- End For Background Image -->
-
 </body>
 </html> 
