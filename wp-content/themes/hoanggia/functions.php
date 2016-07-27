@@ -122,11 +122,15 @@ function get_pictures_cat($catid = ''){
     return $items;
 }
 
-function get_pictures_in_galleries($gallery){
+function get_pictures_in_galleries($gallery, $feature = false){
     global $wpdb;
     $items = array();
     if($gallery) {
-        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` IN ($gallery) 
+        $more = '';
+        if ($feature == true) {
+            $more = 'WHERE p.feature = 1';
+        }
+        $sql = "SELECT * FROM `hg_ngg_pictures` AS p INNER JOIN `hg_ngg_gallery` AS g ON p.`galleryid` IN ($gallery) $more 
             GROUP BY p.`filename` order by RAND() ";
         $items = $wpdb->get_results($sql);
     }
@@ -137,7 +141,7 @@ function get_categories_from_album() {
     global $nggdb;
     $galleries = array();
 
-    $album = $nggdb->find_album(1);
+    $album = $nggdb->find_album(4);
 
     foreach( $album->gallery_ids as $galleryid ){
         $gallery = $nggdb->find_gallery($galleryid);
@@ -148,12 +152,12 @@ function get_categories_from_album() {
     return $galleries;
 }
 
-function get_images_from_album($album_id) {
+function get_images_from_album($album_id, $feature = false) {
     global $nggdb;
     $myalbum = nggdb::find_album( $album_id );
     $mygals = $myalbum->gallery_ids;
     $galleryIds = implode(',', $mygals);
-    $images = get_pictures_in_galleries($galleryIds);
+    $images = get_pictures_in_galleries($galleryIds, $feature);
     return $images;
 }
 
@@ -183,4 +187,8 @@ function wpa5413_query_vars( $query_vars )
     $query_vars[] = 'cat_id';
     $query_vars[] = 'id';
     return $query_vars;
+}
+
+function PageName() {
+    return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
 }

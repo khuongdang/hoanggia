@@ -95,12 +95,12 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <!-- JS Page Level -->
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/app.js"></script>
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/plugins/owl-carousel.js"></script>
-<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/plugins/layer-slider.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/nivoslider/jquery.nivo.slider.pack.js?2012-09-01"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
         OwlCarousel.initOwlCarousel();
-        LayerSlider.initLayerSlider();
+        $('#slider').nivoSlider();
     });
 </script>
 <!--[if lt IE 9]>

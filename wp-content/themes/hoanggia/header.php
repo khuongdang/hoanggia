@@ -8,8 +8,8 @@
 <?php wp_head(); ?>
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+    <meta name="description" content="Công ty Nhân Hoàng Gia, glass, printing, gương trang trí, in ấn sản phẩm gương">
     <meta name="author" content="">
 
     <!-- Favicon -->
@@ -31,7 +31,8 @@
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/nivoslider/themes/default/default.css">
+    <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/nivoslider/nivo-slider.css">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/css/theme-colors/aqua.css" />
@@ -92,7 +93,7 @@
                         <?php if ($items->ID == 54) {
                             $categories = get_categories_from_album();
                             ?>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="<?php echo $link;?>" class="dropdown-toggle" data-toggle="dropdown">
                                     <?php echo $title;?>
                                 </a>
@@ -102,7 +103,7 @@
                                     foreach ($categories as $items) {
                                         $category_title = $items['title'];
                                         ?>
-                                    <li class="">
+                                    <li class="<?php echo $class;?>">
                                         <a href="<?php echo $link;?>?cat_id=<?php echo $items['id'];?>"><?php echo $category_title; ?></a>
                                     </li>
                                         <?php }?>

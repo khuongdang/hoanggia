@@ -1,54 +1,42 @@
 <?php get_header();
 $slider = get_pictures(2);
-$feature_products = get_images_from_album(1);
+$feature_products = get_images_from_album(1, true);
+
+$my_postid = 138;//This is page id or post id
+$content_post = get_post($my_postid);
+$content = $content_post->post_content;
+$content = apply_filters('the_content', $content);
+$hot_content = str_replace(']]>', ']]&gt;', $content);
 ?>
     <!--=== Slider ===-->
-    <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
+
+    <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider">
 <?php foreach ($slider as $items) {
     $title = $items->alttext;
     $image = '/'.str_replace('\\', '/', $items->path).'/'.$items->filename;
     ?>
-        <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-            <img src="<?php echo $image;?>" class="ls-bg" alt="Slide background"/>
-        </div>
+            <img src="<?php echo $image;?>" data-thumb="<?php echo $image;?>" alt="" />
 <?php }?>
-    </div><!--/layer_slider-->
+<!--            <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />-->
+<!--            <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />-->
+        </div>
+<!--        <div id="htmlcaption" class="nivo-html-caption">-->
+<!--            <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.-->
+<!--        </div>-->
+    </div>
+
+    <!--/layer_slider-->
     <!--=== End Slider ===-->
 
     <!--=== Content Part ===-->
     <div class="container content">
         <!-- Service Blocks -->
         <div class="row margin-bottom-30">
-            <div class="col-md-4 service-alternative">
-                <div class="service">
-                    <i class="fa fa-compress service-icon"></i>
-                    <div class="desc">
-                        <h4>Fully Responsive</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 service-alternative">
-                <div class="service">
-                    <i class="fa fa-cogs service-icon"></i>
-                    <div class="desc">
-                        <h4>HTML5 + CSS3</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 service-alternative">
-                <div class="service">
-                    <i class="fa fa-rocket service-icon"></i>
-                    <div class="desc">
-                        <h4>Launch Ready</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
+            <?php echo $hot_content; ?>
         </div>
         <!-- End Service Blokcs -->
-
+        <?php if ($feature_products) { ?>
         <!-- Recent Works -->
         <div class="headline"><h2>Sản phẩm nổi bật</h2></div>
         <div class="row margin-bottom-20">
@@ -75,6 +63,7 @@ $feature_products = get_images_from_album(1);
             <?php }?>
         </div>
         <!-- End Recent Works -->
+    <?php } ?>
 
        <?php include_once 'clients.php'; ?>
     </div><!--/container-->

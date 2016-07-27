@@ -15,15 +15,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
 <div class="container content">
     <div class="row margin-bottom-40">
         <div class="col-md-6 md-margin-bottom-40">
-            <p>Nhân Hoàng Gia kính chào quý khách hàng. Công ty Nhân Hoàng Gia chuyên in ấn, gia công gương hoa văn.</p>
-            <p>Nhân Hoàng Gia luôn mong muốn phục vụ quý khách hàng một cách tốt nhất qua các tiêu chí sau:</p>
-            <ul class="list-unstyled">
-                <li><i class="fa fa-check color-green"></i> Nhiều mặt hàng cho quý khách lựa chọn</li>
-                <li><i class="fa fa-check color-green"></i> Giao hàng tận nơi</li>
-                <li><i class="fa fa-check color-green"></i> Tư vấn miễn phí</li>
-                <li><i class="fa fa-check color-green"></i> Giá cả hợp lý</li>
-                <li><i class="fa fa-check color-green"></i> Trên cả sự hài lòng</li>
-            </ul><br />
+            <?php echo $content;?>
 
             <!-- Blockquotes -->
             <!--<blockquote class="hero-unify">
