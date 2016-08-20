@@ -710,6 +710,7 @@
 .owl-work-v1 .item a strong {
   color: #555;
   display: block;
+  text-transform: capitalize;
 }
 
 .owl-work-v1 .item a i {

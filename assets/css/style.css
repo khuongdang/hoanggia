@@ -616,6 +616,7 @@ a.thumbnail {
 	color: #555;
 	font-size: 24px;
 	margin: 0 0 15px;
+	text-transform: capitalize;
 }
 .portfolio-item li {
 	padding: 3px 0;

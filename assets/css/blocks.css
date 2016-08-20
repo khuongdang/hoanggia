@@ -20,6 +20,7 @@
   color: #666;
   font-size: 22px;
   margin-top: 8px;
+  text-transform: capitalize;
 }
 
 .breadcrumb { 
@@ -35,6 +36,10 @@
 .breadcrumb li a:hover {
   color: #72c02c;
   text-decoration: none;
+
+}
+.breadcrumb li.active {
+  text-transform: capitalize;
 }
 
 @media (max-width: 550px) {
