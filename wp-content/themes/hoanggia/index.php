@@ -1,13 +1,24 @@
 <?php get_header();
 $slider = get_pictures(2);
-$feature_products = get_images_from_album(1, true);
+$feature_products = get_images_from_album(4, true);
 
 $my_postid = 138;//This is page id or post id
 $content_post = get_post($my_postid);
 $content = $content_post->post_content;
 $content = apply_filters('the_content', $content);
 $hot_content = str_replace(']]>', ']]&gt;', $content);
+require_once('mobile-detect.php');
+$mobile_detect = new Mobile_Detect();
 ?>
+<?php if (!$mobile_detect->isMobile() && !$mobile_detect->isTablet()) { ?>
+    <style>
+        @media (min-width: 992px) {
+            .col-md-4 {
+                width: 33.33333333%;
+            }
+        }
+    </style>
+<?php }?>
     <!--=== Slider ===-->
 
     <div class="slider-wrapper theme-default">

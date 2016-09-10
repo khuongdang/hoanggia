@@ -3,7 +3,7 @@
     <select id="gallery_id">
         <option value="0"><?php _e('Create a new gallery', 'nggallery'); ?></option>
         <?php foreach ($galleries as $gallery): ?>
-            <option value="<?php echo esc_attr($gallery->{$gallery->id_field}) ?>"><?php echo esc_attr($gallery->title) ?></option>
+            <option value="<?php echo esc_attr($gallery->{$gallery->id_field}) ?>"><?php echo esc_attr($gallery->title) ?> - <?php echo $gallery->gid;?></option>
         <?php endforeach ?>
     </select>
     <input type="text" id="gallery_name" name="gallery_name"/>

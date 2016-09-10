@@ -424,6 +424,11 @@
 
 .owl-carousel-v1 .item img {
   text-align: center;
+  max-height: 195px;
+  min-height:195px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .owl-carousel-v1 .owl-pagination {

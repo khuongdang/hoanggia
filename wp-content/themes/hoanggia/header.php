@@ -91,7 +91,7 @@
                         $link  = $items->url;
                     ?>
                         <?php if ($items->ID == 54) {
-                            $categories = get_categories_from_album();
+                            $categories = get_categories_from_album(4);
                             ?>
                             <li class="dropdown">
                                 <a href="<?php echo $link;?>" class="dropdown-toggle" data-toggle="dropdown">
@@ -109,6 +109,38 @@
                                         <?php }?>
                                 </ul>
                             <?php }?>
+                            </li>
+                            <?php } elseif ($items->ID == 60) {
+                            ?>
+                            <li class="dropdown">
+                                <a href="<?php echo $link;?>" class="dropdown-toggle" data-toggle="dropdown">
+                                   <?php echo $title; ?>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <?php
+                                for ($i = 5; $i < 10; $i ++) {
+                                    $sub_categories = get_categories_from_album($i);
+                                    $album_info = getAlbumInfo($i);
+                                    if (checkAlbumHasGallery($i)) {
+                                        $sub_class = 'dropdown-menu';
+                                    } else {
+                                        $sub_class = '';
+                                    }
+                                ?>
+
+                                    <li class="dropdown-submenu">
+                                        <a href="<?php echo $link;?>?cat_parent_id=<?php echo $album_info->id;?>"><?php echo $album_info->name;?></a>
+                                        <ul class="<?php echo $sub_class;?>">
+                                            <?php foreach($sub_categories as $sub_items) {
+                                                $category_title = $sub_items['title'];
+                                                ?>
+                                            <li><a href="<?php echo $link;?>?cat_id=<?php echo $sub_items['id'];?>"><?php echo $category_title;?></a></li>
+                                            <?php } ?>
+                                            </ul>
+
+                                    </li>
+                                <?php } ?>
+                                </ul>
                             </li>
                             <?php } else {?>
                         <li class="">
